@@ -6,4 +6,12 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.config/alacrity/alacritty.yml: alacritty.yml
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+    ~/.config/Code/User/settings.json: vscode/settings.json
     ~/.config/picom.conf: picom.conf
+    ~/.editorconfig: .editorconfig
+    ~/.gitconfig: .gitconfig
+    ~/.prettierrc: .prettierrc
+    ~/.zshrc: zsh/.zshrc
+    ~/.zsh_aliases: zsh/.zsh_aliases

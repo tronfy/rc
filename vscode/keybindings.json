@@ -1,0 +1,30 @@
+[
+  { "key": "ctrl+'", "command": "workbench.action.terminal.toggleTerminal", "when": "terminal.active" },
+
+  { "key": "ctrl+;", "command": "editor.action.commentLine" },
+
+  // move between terminal and editor
+  { "key": "ctrl+alt+down", "command": "workbench.action.terminal.focus", "when": "!terminalFocus" },
+  { "key": "ctrl+alt+up", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
+
+  // split editor/terminal
+  { "key": "ctrl+\\", "command": "workbench.action.splitEditor", "when": "editorFocus" },
+  { "key": "ctrl+\\", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
+
+  // switch editors without switcher
+  { "key": "ctrl+tab", "command": "workbench.action.nextEditor", "when": "editorFocus" },
+  { "key": "ctrl+shift+tab", "command": "workbench.action.previousEditor", "when": "editorFocus" },
+
+  // move lines
+  { "key": "ctrl+shift+up", "command": "editor.action.moveLinesUpAction" },
+  { "key": "ctrl+shift+down", "command": "editor.action.moveLinesDownAction" },
+
+  // dont quit on ctrl+q
+  { "key": "ctrl+q", "command": "-workbench.action.quit" },
+
+  {
+    "key": "alt+enter",
+    "command": "editor.action.autoFix",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+  }
+]

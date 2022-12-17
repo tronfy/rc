@@ -1,0 +1,23 @@
+alias ls="lsd"
+alias dc="docker compose"
+alias d="docker"
+
+# run command silently
+# usage: shh <command>
+shh() {
+  if [ $# -gt 0 ]; then
+    $@ >/dev/null 2>&1 &
+  else; echo "usage: shh <command>"; fi
+}
+
+# page if large text
+# usage: echo <text> | page
+page() {
+  i=$(</dev/stdin)
+  # if linecount exceeds term height, page
+  if [ $(echo "$i" | wc -l) -gt $(expr $(tput lines) - 3) ]; then
+    echo "$i" | $PAGER
+  else
+    echo "$i"
+  fi
+}

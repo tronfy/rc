@@ -1,0 +1,123 @@
+{
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "450",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorSurroundingLines": 3,
+
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.bracketPairColorization.enabled": true,
+  // "editor.stickyScroll.enabled": true,
+
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 1.5,
+
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.fixAll.eslint": true
+  },
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "python.formatting.provider": "black",
+
+  "[css][html][javascript][json][jsonc][typescript][markdown][typescriptreact][scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": { "editor.defaultFormatter": "ms-python.python" },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "venv": true,
+    "**/__pycache__": true
+  },
+
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/dist": true,
+    "**/build": true
+  },
+
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true,
+
+  "workbench.colorTheme": "Lunar Pink",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "window.titleBarStyle": "custom",
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.suggestSmartCommit": false,
+
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "typescriptreact": true,
+    "scss": true
+  },
+
+  "gitlens.advanced.messages": {
+    "suppressCreatePullRequestPrompt": true
+  },
+
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  "RPC.editingText": "editing a .{extension} file",
+  "RPC.viewingText": "editing a .{extension} file",
+  "RPC.debuggingText": "debugging .{extension} file",
+  "RPC.fileInfoText": "{language} file, {linecount} lines",
+  "RPC.placeholderText": "vscode",
+  "RPC.idleTimeout": 0,
+  "RPC.showWorkspace": false,
+  "RPC.checkIdle": false,
+  "RPC.showProblems": false,
+  // "RPC.workspaceText": "in {workspace}",
+  "RPC.workspaceText": "in an awesome project"
+}

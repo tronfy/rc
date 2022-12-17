@@ -1,0 +1,53 @@
+window:
+  dimensions:
+    columns: 110
+    lines: 30
+
+  padding:
+    x: 5
+    y: 5
+
+  title: alacritty
+  class:
+    instance: alacritty
+
+  opacity: 0.7
+
+font:
+  normal:
+    family: 'FiraCode Nerd Font'
+
+colors:
+  primary:
+    background: '#131313'
+    foreground: '#dddddd'
+
+  normal:
+    black: '#131313'
+    red: '#ed0e28'
+    green: '#19dd16'
+    yellow: '#f4b800'
+    blue: '#1676dd'
+    magenta: '#ed0e96'
+    cyan: '#16dadd'
+    white: '#dddddd'
+
+  bright:
+    black: '#131313'
+    red: '#ed0e28'
+    green: '#19dd16'
+    yellow: '#f4b800'
+    blue: '#1676dd'
+    magenta: '#ed0e96'
+    cyan: '#16dadd'
+    white: '#dddddd'
+
+selection:
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Underline
+
+shell:
+  program: /bin/zsh
