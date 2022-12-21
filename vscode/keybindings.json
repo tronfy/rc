@@ -12,8 +12,8 @@
   { "key": "ctrl+\\", "command": "workbench.action.terminal.split", "when": "terminalFocus" },
 
   // switch editors without switcher
-  { "key": "ctrl+tab", "command": "workbench.action.nextEditor", "when": "editorFocus" },
-  { "key": "ctrl+shift+tab", "command": "workbench.action.previousEditor", "when": "editorFocus" },
+  { "key": "ctrl+tab", "command": "workbench.action.nextEditor" },
+  { "key": "ctrl+shift+tab", "command": "workbench.action.previousEditor" },
 
   // move lines
   { "key": "ctrl+shift+up", "command": "editor.action.moveLinesUpAction" },
