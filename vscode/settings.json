@@ -50,6 +50,10 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
 
+  "[lua]": {
+    "editor.formatOnSave": false
+  },
+
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
 
