@@ -7,12 +7,12 @@
 
 - link:
     ~/.config/awesome: awesome
-    ~/.config/alacritty.yml: alacritty.yml
+    ~/.config/alacritty.yml: alacritty/alacritty.yml
     ~/.config/Code/User/keybindings.json: vscode/keybindings.json
     ~/.config/Code/User/settings.json: vscode/settings.json
-    ~/.config/picom.conf: picom.conf
-    ~/.editorconfig: .editorconfig
-    ~/.gitconfig: .gitconfig
-    ~/.prettierrc: .prettierrc
+    ~/.config/picom.conf: picom/picom.conf
+    ~/.editorconfig: .home/.editorconfig
+    ~/.gitconfig: .home/.gitconfig
+    ~/.prettierrc: .home/.prettierrc
     ~/.zshrc: zsh/.zshrc
     ~/.zsh_aliases: zsh/.zsh_aliases
