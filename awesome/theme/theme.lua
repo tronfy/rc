@@ -19,13 +19,13 @@ theme.fg_focus                  = "#df6cbe"
 theme.fg_focus2                 = "#e09ece"
 theme.fg_urgent                 = "#f4b800"
 theme.fg_minimize               = "#ffffff"
-theme.border_width              = dpi(0)
+theme.border_width              = dpi(1)
 theme.border_normal             = "#00000000"
 theme.border_focus              = "#555555"
 theme.taglist_squares_unsel     = theme.confdir .. "/icons/square_b.png"
 theme.tasklist_plain_task_name  = true
 theme.tasklist_disable_icon     = true
-theme.useless_gap               = 3
+theme.useless_gap               = 2
 
 local markup = lain.util.markup
 
