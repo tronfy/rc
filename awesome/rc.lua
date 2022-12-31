@@ -81,6 +81,12 @@ awful.rules.rules = {{
     }
 }}
 
+-- force minimized clients to unminimize (fixes blanking in proton games)
+-- https://www.reddit.com/r/awesomewm/comments/cftgfs/comment/eucfikb
+client.connect_signal("property::minimized", function(c)
+    c.minimized = false
+end)
+
 -- focus follows mouse
 client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {
