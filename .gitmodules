@@ -2,7 +2,3 @@
 	path = .dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-
-[submodule "awesome/lain"]
-	path = awesome/lain
-	url = https://github.com/tronfy/lain.git

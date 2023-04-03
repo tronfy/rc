@@ -1,0 +1,54 @@
+{
+  "layer": "top",
+  "position": "top",
+  // "spacing": 0,
+
+  "margin-top": 5,
+  "margin-left": 5,
+  "margin-right": 5,
+
+  "modules-left": ["wlr/workspaces"],
+  "modules-right": [/*"tray",*/ "custom/media", "pulseaudio", "memory", "cpu", "clock"],
+
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "format-alt": "{:%Y-%m-%d}",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{used}G ",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{volume}% ",
+    "format-muted": "{volume}% ",
+    "format-bluetooth": "{volume}% ",
+    "format-bluetooth-muted": "{volume}% ",
+    "on-click": "pavucontrol"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 60,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous"
+  }
+}
