@@ -1,5 +1,6 @@
 local awful = require("awful")
 local lain = require("lain")
+local naughty = require("naughty")
 local table = awful.util.table
 local hotkeys_popup = require("awful.hotkeys_popup")
 
@@ -113,10 +114,24 @@ end, {
     group = "hotkeys"
 }),
 
+awful.key({mod}, "u", function()
+    awful.client.urgent.jumpto()
+end, {
+    description = "go to urgent",
+    group = "hotkeys"
+}),
+
 awful.key({alt}, "space", function()
     awful.spawn("rofi -show drun")
 end, {
     description = "run rofi",
+    group = "hotkeys"
+}),
+
+awful.key({alt, "Control"}, "space", function()
+    awful.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu")
+end, {
+    description = "open rofi power menu",
     group = "hotkeys"
 }),
 
@@ -130,11 +145,26 @@ end, {
 }),
 
 awful.key({}, "Print", function()
-    os.execute("scrot -q 100 -f -s -e 'xclip -selection clipboard -t image/png -i $f'")
+    awful.spawn("flameshot gui")
 end, {
     description = "take a screenshot",
     group = "hotkeys"
 }),
+
+awful.key({mod}, "c", function()
+    os.execute("colorpicker --short --one-shot | xclip -sel clipboard")
+end, {
+    description = "launch colorpicker",
+    group = "hotkeys"
+}),
+
+awful.key({mod, "Shift"}, "b", function()
+    awful.spawn("bluetoothctl disconnect")
+end, {
+    description = "disconnect bluetooth",
+    group = "hotkeys"
+}),
+
 
 
 -- [ tag ]
@@ -184,6 +214,7 @@ awful.key({mod, "Shift"}, "Right", function()
 end, {
     description = "move tag to the right",
     group = "tag"
+
 })
 
 )

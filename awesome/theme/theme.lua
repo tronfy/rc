@@ -10,7 +10,7 @@ local dpi   = require("beautiful.xresources").apply_dpi
 local theme                     = {}
 theme.confdir                   = os.getenv("HOME") .. "/.config/awesome/theme"
 theme.wallpaper                 = theme.confdir .. "/wallpaper.png"
-theme.font                      = "FiraCode Nerd Font 10"
+theme.font                      = "Fira Code Nerd Font 10"
 theme.bg_normal                 = "#00000077"
 theme.bg_focus                  = "#00000000"
 theme.bg_urgent                 = "#00000000"
@@ -61,6 +61,8 @@ end
 
 local netdowninfo = wibox.widget.textbox()
 local netupinfo = lain.widget.net({
+    units = 1024 * 1024, -- MB/s
+    format = "%.1f",
     settings = function()
         tb_set_markup(widget, net_now.sent .. "u", theme.fg_focus)
         tb_set_markup(netdowninfo, net_now.received .. "d", theme.fg_focus)
@@ -97,11 +99,62 @@ local cpu = wibox.widget {
     }),
     spacerS,
     lain.widget.temp({
+        timeout = 1,
+        tempfile = "/sys/devices/virtual/thermal/thermal_zone1/temp",
         settings = function()
             tb_set_markup(widget, coretemp_now .. "c", theme.fg_focus)
         end
     })
 }
+
+local gpuusageinfo = wibox.widget.textbox()
+local gputempinfo = lain.widget.contrib.nvidia({
+    timeout = 1,
+    settings = function()
+        tb_set_markup(widget, gpu.temp .. "c", theme.fg_focus)
+        tb_set_markup(gpuusageinfo, gpu.usage .. "%", theme.fg_focus)
+    end
+})
+local gpu = wibox.widget {
+    layout = wibox.layout.fixed.horizontal,
+    textbox('gpu'),
+    spacerS,
+    gpuusageinfo,
+    spacerS,
+    gputempinfo
+}
+
+local ds4_battery = wibox.widget {
+    layout = wibox.layout.fixed.horizontal,
+    textbox('ds4'),
+    spacerS,
+    lain.widget.contrib.ds4_battery({
+        settings = function()
+            tb_set_markup(widget, bat, theme.fg_focus)
+        end
+    }),
+}
+
+local speedrun_delta = wibox.widget.textbox()
+local speedrun = wibox.widget {
+    layout = wibox.layout.fixed.horizontal,
+    lain.widget.contrib.speedrun({
+        settings = function()
+            local color = "#dd2309"
+            if (sr.delta:sub(1, 1) == "-") then
+                color = "#23dd09"
+            end
+
+            if (sr.level:sub(1, 1) ~= "-") then
+                tb_set_markup(speedrun_delta, sr.delta, color)
+                tb_set_markup(widget, sr.level, theme.fg_normal)
+            end
+        end
+    }),
+    spacerS,
+    speedrun_delta
+}
+
 
 theme.at_screen_connect = function(s)
     gears.wallpaper.maximized(theme.wallpaper, s, true)
@@ -129,11 +182,15 @@ theme.at_screen_connect = function(s)
         nil,
         {
             layout = wibox.layout.fixed.horizontal,
+            -- speedrun, spacerL,
+            ds4_battery, spacerL,
             net,
             spacerL,
             mem,
             spacerL,
             cpu,
+            spacerL,
+            gpu,
             spacerL,
             clock,
             spacerL

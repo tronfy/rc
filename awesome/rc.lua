@@ -22,7 +22,9 @@ end
 
 run_once({
     "picom", -- compositor
-    "unclutter -root" -- autohide mouse cursor
+    "unclutter -root", -- autohide mouse cursor
+    "~/.startup/sunshine.sh",
+    "emote"
 })
 
 awful.util.terminal = env.TERM
@@ -74,6 +76,19 @@ awful.rules.rules = {{
         sticky = true,
         above = true,
         below = false,
+        maximized = false,
+        maximized_vertical = false,
+        maximized_horizontal = false,
+        titlebars_enabled = false
+    }
+}, {
+    rule = {name = "mpv-wallpaper"},
+    properties = {
+        floating = true,
+        ontop = false,
+        sticky = true,
+        above = false,
+        below = true,
         maximized = false,
         maximized_vertical = false,
         maximized_horizontal = false,
