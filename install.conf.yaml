@@ -10,6 +10,7 @@
     ~/.config/Code/User/keybindings.json: vscode/keybindings.jsonc
     ~/.config/Code/User/settings.json: vscode/settings.jsonc
     ~/.config/hypr: hyprland
+    ~/.config/rofi: rofi
     ~/.config/swaylock: swaylock
     ~/.config/waybar: waybar
     ~/.editorconfig: .home/.editorconfig
