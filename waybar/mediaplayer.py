@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# https://github.com/Alexays/Waybar/blob/master/resources/custom_modules/mediaplayer.py
+# adapted from https://github.com/Alexays/Waybar/blob/master/resources/custom_modules/mediaplayer.py
 import argparse
 import logging
 import sys
@@ -48,8 +48,6 @@ def on_metadata(player, metadata, manager):
     else:
         track_info = player.get_title()
 
-    if player.props.status != "Playing" and track_info:
-        track_info = " " + track_info
     write_output(track_info, player)
 
 
