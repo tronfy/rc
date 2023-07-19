@@ -6,7 +6,7 @@ alias d="docker"
 # usage: shh <command>
 shh() {
   if [ $# -gt 0 ]; then
-    $@ >/dev/null 2>&1 &
+    screen -dm bash -c "$@"
   else; echo "usage: shh <command>"; fi
 }
 

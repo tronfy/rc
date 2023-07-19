@@ -11,11 +11,12 @@ window:
   class:
     instance: alacritty
 
-  opacity: 0.7
+  opacity: 0.5
 
 font:
   normal:
-    family: 'FiraCode Nerd Font'
+    family: 'JetBrainsMono Nerd Font'
+  size: 10
 
 colors:
   primary:
@@ -23,7 +24,7 @@ colors:
     foreground: '#dddddd'
 
   normal:
-    black: '#131313'
+    black: '#444444'
     red: '#ed0e28'
     green: '#19dd16'
     yellow: '#f4b800'
@@ -33,7 +34,7 @@ colors:
     white: '#dddddd'
 
   bright:
-    black: '#131313'
+    black: '#444444'
     red: '#ed0e28'
     green: '#19dd16'
     yellow: '#f4b800'
