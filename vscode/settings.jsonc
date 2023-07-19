@@ -1,7 +1,9 @@
 {
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
+  // "editor.fontSize": 16,
   "editor.fontSize": 14,
+  "editor.lineHeight": 1.3,
   "editor.fontWeight": "450",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -21,7 +23,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
 
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "editor.mouseWheelScrollSensitivity": 1.5,
 
@@ -45,7 +47,10 @@
   "[css][html][javascript][json][jsonc][typescript][markdown][typescriptreact][scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[python]": { "editor.defaultFormatter": "ms-python.python" },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
   "[dockercompose]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -97,11 +102,13 @@
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": true,
     "markdown": true,
+    "scminput": false,
+    "yaml": true,
     "typescriptreact": true,
-    "scss": true
+    "scss": true,
+    "python": true
   },
 
   "gitlens.advanced.messages": {
@@ -113,15 +120,31 @@
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.defaultProfile.linux": "zsh",
 
+  // "RPC.editingText": "editing {file}",
+  // "RPC.viewingText": "editing {file}",
+  // "RPC.debuggingText": "editing {file}",
   "RPC.editingText": "editing a .{extension} file",
   "RPC.viewingText": "editing a .{extension} file",
-  "RPC.debuggingText": "debugging .{extension} file",
-  "RPC.fileInfoText": "{language} file, {linecount} lines",
+  "RPC.debuggingText": "editing a .{extension} file",
+  "RPC.fileInfoText": "{language} file",
   "RPC.placeholderText": "vscode",
   "RPC.idleTimeout": 0,
   "RPC.showWorkspace": false,
   "RPC.checkIdle": false,
   "RPC.showProblems": false,
-  // "RPC.workspaceText": "in {workspace}",
-  "RPC.workspaceText": "in an awesome project"
+  "RPC.workspaceText": "in an awesome project",
+  "redhat.telemetry.enabled": true,
+  "git.openRepositoryInParentFolders": "never",
+  "svelte.enable-ts-plugin": true,
+  "files.associations": {
+    "dunstrc": "properties",
+    ".zsh_aliases": "shellscript",
+    "*.json5": "jsonc"
+  },
+  "cmake.configureOnOpen": true,
+  "jupyter.askForKernelRestart": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.clang_format_style": "LLVM"
 }
