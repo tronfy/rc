@@ -12,8 +12,6 @@ export PAGER=less
 
 export CMAKE_BUILD_PARALLEL_LEVEL=10
 
-export MOZ_ENABLE_WAYLAND=1
-export GTK_USE_PORTAL=1
 export MANGOHUD=1
 export MANGOHUD_DLSYM=1
 export PIPEWIRE_LATENCY=128/48000
@@ -21,19 +19,6 @@ export PIPEWIRE_LATENCY=128/48000
 export SDKMAN_DIR="$HOME/.sdkman"
 
 export ANDROID_HOME=/home/tronfy/Android/Sdk
-
-export LIBVA_DRIVER_NAME=nvidia
-export XDG_SESSION_TYPE=wayland
-export GBM_BACKEND=nvidia-drm
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export WLR_NO_HARDWARE_CURSORS=1
-
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME="qt5ct"
-
-export __GL_GSYNC_ALLOWED=0
-export __GL_VRR_ALLOWED=0
-export WLR_DM_NO_ATOMIC=1
 
 
 DISABLE_AUTO_UPDATE=true

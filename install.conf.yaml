@@ -1,20 +1,21 @@
 - defaults:
-  link:
-    create: true
-    relink: true
+    link:
+      create: true
+      relink: true
 
 - clean: ['~', '~/.config']
 
 - link:
-  ~/.config/alacritty.yml: alacritty/alacritty.yml
-  ~/.config/Code/User/keybindings.json: vscode/keybindings.jsonc
-  ~/.config/Code/User/settings.json: vscode/settings.jsonc
-  ~/.config/hypr: hyprland
-  ~/.config/rofi: rofi
-  ~/.config/swaylock: swaylock
-  ~/.config/waybar: waybar
-  ~/.editorconfig: .home/.editorconfig
-  ~/.gitconfig: .home/.gitconfig
-  ~/.prettierrc: .home/.prettierrc
-  ~/.zsh_aliases: zsh/.zsh_aliases
-  ~/.zshrc: zsh/.zshrc
+    ~/.config/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/bspwm: bspwm
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.jsonc
+    ~/.config/Code/User/settings.json: vscode/settings.jsonc
+    ~/.config/picom: picom
+    ~/.config/polybar: polybar
+    ~/.config/rofi: rofi
+    ~/.config/sxhkd: sxhkd
+    ~/.editorconfig: .home/.editorconfig
+    ~/.gitconfig: .home/.gitconfig
+    ~/.prettierrc: .home/.prettierrc
+    ~/.zsh_aliases: zsh/.zsh_aliases
+    ~/.zshrc: zsh/.zshrc
